@@ -92,8 +92,7 @@ function opcions(){
         1)        
             Calculadora
         ;;
-        2)
-            echo `clear`
+        2)            
             echo ""
             echo "___________________________________"
             echo ""
@@ -157,8 +156,7 @@ function options(){
         1)        
             Calculator
         ;;
-        2)
-            echo `clear`
+        2)            
             echo ""
             echo "___________________________________"
             echo ""
@@ -224,8 +222,7 @@ function opciones(){
         1)        
             Calculadoraes
         ;;
-        2)
-            echo `clear`
+        2)            
             echo ""
             echo "___________________________________"
             echo ""
@@ -304,7 +301,7 @@ function Calculadora(){
     case $numcalc in
         1)
         echo `clear`
-        echo "          » SUMA"
+        echo "          » SUMA «"
         echo ""
         read -p "Introduce o primeiro numero: " a
         read -p "Introduce o segundo numero: " b
@@ -317,7 +314,7 @@ function Calculadora(){
         ;;
         2)
         echo `clear`
-        echo "          » RESTA"
+        echo "          » RESTA «"
         echo ""
         read -p "Introduce o primeiro numero: " a
         read -p "Introduce o segundo numero: " b
@@ -356,7 +353,7 @@ function Calculadoraes(){
     case $numcalc in
         1)
         echo `clear`
-        echo "          » SUMA"
+        echo "          » SUMA «"
         echo ""
         read -p "Introduce el primer numero: " a
         read -p "Introduce el segundo numero: " b
@@ -369,7 +366,7 @@ function Calculadoraes(){
         ;;
         2)
         echo `clear`
-        echo "          » RESTA"
+        echo "          » RESTA «"
         echo ""
         read -p "Introduce el primer numero: " a
         read -p "Introduce el segundo numero: " b
@@ -408,7 +405,7 @@ function Calculator(){
     case $numcalc in
         1)
         echo `clear`
-        echo "        » ADDITION"
+        echo "        » ADDITION «"
         echo ""
         read -p "Type the first number: " a
         read -p "Type the second number: " b
@@ -421,7 +418,7 @@ function Calculator(){
         ;;
         2)
         echo `clear`
-        echo "       » ABSTRACTION"
+        echo "       » ABSTRACTION «"
         echo ""
         read -p "Type the first number: " a
         read -p "Type the second number: " b
