@@ -1,23 +1,48 @@
 #!/bin/bash
 
 echo `clear`
-echo "Welcome"
+echo "             ________________________________________________________"
+echo ""
+echo "                                   
+                  \ \        / / | |                         | |
+                   \ \  /\  / ___| | ___ ___  _ __ ___   ___ | |
+                    \ \/  \/ / _ | |/ __/ _ \|  _   _ \ / _ ||_|
+                     \  /\  |  __| | (_| (_) | | | | | |  __/ _
+                      \/  \/ \___|_|\___\___/|_| |_| |_|\___||_|"
+echo "
+"
+echo "             ________________________________________________________"
+
+sleep 1
+echo `clear`
 sair=true;
-echo "1.English 2.Spanish 3.Galician"
+echo "  _________________________"
+echo ""
+echo "  █████████████████████████"
+echo "  █####### LANGUAGES #####█"
+echo "  █████████████████████████"
+echo "  █ 1.      English       █"
+echo "  █ 2.      Spanish       █"
+echo "  █ 3.      Galician      █"
+echo "  █████████████████████████"
+echo "  _________________________"
+echo ""
 read -p "Select a language (Type the number): " language
 
 ### FUNCTIONS ###
-function menugl(){ 
-    echo "█████████████████████████"   
-    echo "█######### Menu ########█"
-    echo "█████████████████████████"
-    echo "█ 1.   |Calculadora|    █"
-    echo "█ 2.|Directorio Actual| █"
-    echo "█ 3.      |Data|        █"
-    echo "█ 4.        ||          █"
-    echo "█ 5.      |Sair|        █"
-    echo "█████████████████████████"
-    echo "_________________________"
+function menugl(){
+    echo "  _________________________"
+    echo "" 
+    echo "  █████████████████████████"   
+    echo "  █######### Menu ########█"
+    echo "  █████████████████████████"
+    echo "  █ 1.    Calculadora     █"
+    echo "  █ 2. Directorio Actual  █"
+    echo "  █ 3.       Data         █"
+    echo "  █ 4.  Crear Directorio  █"
+    echo "  █ 5.      |Sair|        █"
+    echo "  █████████████████████████"
+    echo "  _________________________"
     echo ""
     
     read -p "Escribe o numero que queras elexir: " num
@@ -25,33 +50,37 @@ function menugl(){
     
 }
 function menuen(){
-    echo "█████████████████████████"   
-    echo "█######### Menu ########█"
-    echo "█████████████████████████"
-    echo "█ 1.    |Calculator|    █"
-    echo "█ 2.|Current Directory| █"
-    echo "█ 3.      |Date|        █"
-    echo "█ 4.        ||          █"
-    echo "█ 5.      |Exit|        █"
-    echo "█████████████████████████" 
-    echo "_________________________"
+    echo "  _________________________"
+    echo ""
+    echo "  █████████████████████████"   
+    echo "  █######### Menu ########█"
+    echo "  █████████████████████████"
+    echo "  █ 1.     Calculator     █"
+    echo "  █ 2. Current Directory  █"
+    echo "  █ 3.       Date         █"
+    echo "  █ 4.  Create Directory  █"
+    echo "  █ 5.      |Exit|        █"
+    echo "  █████████████████████████" 
+    echo "  _________________________"
     echo ""
     
     read -p "Type the option number: " num
     return $num
     
 }
-function menues(){   
-    echo "█████████████████████████"  
-    echo "█######### Menu ########█"
-    echo "█████████████████████████"
-    echo "█ 1.   |Calculadora|    █"
-    echo "█ 2.|Directorio Actual| █"
-    echo "█ 3.      |Fecha|       █"
-    echo "█ 4.         ||         █"
-    echo "█ 5.      |Salir|       █"
-    echo "█████████████████████████" 
-    echo "_________________________"
+function menues(){ 
+    echo "  _________________________"
+    echo ""  
+    echo "  █████████████████████████"  
+    echo "  █######### Menu ########█"
+    echo "  █████████████████████████"
+    echo "  █ 1.    Calculadora     █"
+    echo "  █ 2. Directorio Actual  █"
+    echo "  █ 3.       Fecha        █"
+    echo "  █ 4.  Crear Directorio  █"
+    echo "  █ 5.      |Salir|       █"
+    echo "  █████████████████████████" 
+    echo "  _________________________"
     echo ""
     
     read -p "Type the option number: " num
@@ -82,9 +111,30 @@ function opcions(){
             echo ""
             echo `date`
             echo "__________________________________"
+            echo ""
+            sleep 1
+            echo "Volvendo ao menú..."
+            sleep 2
+            echo `clear`
         ;;
         4)
-            echo "aaa"
+            echo `clear`
+            read -p "Escribe o nome do directorio: " dir
+            echo `mkdir $dir`
+            sleep 1
+            echo `clear`
+            echo "__________________________________"
+            echo ""
+            echo "» Creado directorio:  /" $dir
+            echo ""
+            echo "__________________________________"            
+            sleep 2
+            echo `clear`
+            echo ""
+            sleep 1
+            echo "Volvendo ao menú..."
+            sleep 2
+            echo `clear`
         ;;
         5)
             echo ""
@@ -126,9 +176,30 @@ function options(){
             echo ""
             echo `date`
             echo "__________________________________"
+            echo ""
+            sleep 1
+            echo "Going back to the menu..."
+            sleep 2
+            echo `clear`
         ;;
         4)
-            echo "aaa"
+            echo `clear`
+            read -p "Type the directory's name: " dir
+            echo `mkdir $dir`
+            sleep 1
+            echo `clear`            
+            echo "__________________________________"
+            echo ""
+            echo "» Directory created:  /" $dir
+            echo ""
+            echo "__________________________________"
+            sleep 2
+            echo `clear`
+            echo ""
+            sleep 1
+            echo "Going back to the menu..."
+            sleep 2
+            echo `clear`   
         ;;
         5)
             echo ""
@@ -171,10 +242,35 @@ function opciones(){
             echo "__________________________________"
             echo ""
             echo `date`
-            echo "__________________________________"        
+            echo "__________________________________"
+            echo ""
+            sleep 1
+            echo "Volviendo al menú..."
+            sleep 2
+            echo `clear`
+            echo ""
+            sleep 1
+            echo "Volviendo al menú..."
+            sleep 2
+            echo `clear`          
         ;;
         4)
-            echo "aaa"
+            echo `clear`
+            read -p "Escribe el nombre del directorio: " dir
+            echo `mkdir $dir`
+            sleep 1
+            echo `clear`
+            echo "__________________________________"
+            echo ""
+            echo "» Creado directorio:  /" $dir
+            echo ""
+            echo "__________________________________"
+            sleep 2
+            echo `clear`
+            echo ""
+            echo "Volviendo al menú..."
+            sleep 2
+            echo `clear`   
         ;;
         5)
             echo ""
@@ -193,9 +289,17 @@ function opciones(){
     esac
 }
 function Calculadora(){
-    echo "#Calculadora#"
-    echo "|Suma|"
-    echo "|Resta|"
+    echo `clear`
+    echo "  █████████████████████████"
+    echo "  █######Calculadora######█"
+    echo "  █████████████████████████"
+    echo "  █                       █"
+    echo "  █ 1.     + Suma         █"
+    echo "  █. . . . . . . . . . . .█"
+    echo "  █ 2.     - Resta        █"
+    echo "  █                       █"
+    echo "  █████████████████████████"
+    echo ""
     read -p "Que queres facer? " numcalc
     case $numcalc in
         1)
@@ -237,9 +341,17 @@ function Calculadora(){
     sleep 1
 }
 function Calculadoraes(){
-    echo "#Calculadora#"
-    echo "|Suma|"
-    echo "|Resta|"
+    echo `clear`
+    echo "  █████████████████████████"
+    echo "  █######Calculadora######█"
+    echo "  █████████████████████████"
+    echo "  █                       █"
+    echo "  █ 1.     + Suma         █"
+    echo "  █. . . . . . . . . . . .█"
+    echo "  █ 2.     - Resta        █"
+    echo "  █                       █"
+    echo "  █████████████████████████"
+    echo ""
     read -p "¿Que quieres hacer? " numcalc
     case $numcalc in
         1)
@@ -281,9 +393,17 @@ function Calculadoraes(){
     sleep 1
 }
 function Calculator(){
-    echo "#Calculator#"
-    echo "|Addition|"
-    echo "|Abstraction|"
+    echo `clear`
+    echo "  █████████████████████████"
+    echo "  █######Calculator#######█"
+    echo "  █████████████████████████"
+    echo "  █                       █"
+    echo "  █ 1.  +  Addition       █"
+    echo "  █. . . . . . . . . . . .█"
+    echo "  █ 2.  - Abstraction     █"
+    echo "  █                       █"
+    echo "  █████████████████████████"
+    echo ""
     read -p "What do you want to do? " numcalc
     case $numcalc in
         1)
@@ -330,7 +450,7 @@ function Calculator(){
 ### PROGRAM ###
 
 case $language in
-    1)
+    1) #English
     while $sair
     do
     menuen
@@ -340,7 +460,7 @@ case $language in
 
     done
     ;;
-    2)
+    2) #Spanish
     while $sair
     do
     menues
@@ -350,13 +470,12 @@ case $language in
 
     done
     ;;
-    3)
+    3) #Galician
     while $sair
     do
     menugl
     respuesta=$?
     opcions $respuesta
-
 
     done
     ;;
