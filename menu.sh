@@ -6,39 +6,6 @@ sair=true;
 echo "1.English 2.Spanish 3.Galician"
 read -p "Select a language" language
 
-case $language in
-    1)
-    while $sair
-    do
-    menuen
-    respuesta=$?
-    options $respuesta
-
-
-    done
-    ;;
-    2)
-    while $sair
-    do
-    menues
-    respuesta=$?
-    opciones $respuesta
-
-
-    done
-    ;;
-    3)
-    while $sair
-    do
-    menugl
-    respuesta=$?
-    opcions $respuesta
-
-
-    done
-    ;;
-esac
-
 #functions
 function menugl(){    
     echo "## Menu ##"
@@ -102,8 +69,7 @@ function opcions(){
         sleep 1
         echo `clear`
         sair=false;
-        ;;
-        ;;
+        ;;        
         *)
         echo ""
         echo "Ata pronto!"
@@ -128,7 +94,11 @@ function options(){
             echo "aaa"
         ;;
         5)
-
+        echo ""
+        echo "See you soon!"
+        sleep 1
+        echo `clear`
+        sair=false;
         ;;
         *)
         echo ""
@@ -154,7 +124,11 @@ function opciones(){
             echo "aaa"
         ;;
         5)
-
+        echo ""
+        echo "Hasta pronto!"
+        sleep 1
+        echo `clear`
+        sair=false;
         ;;
         *)
         echo ""
@@ -231,6 +205,41 @@ function Calculator(){
     esac
     sleep 1
 }
+
+
+
+case $language in
+    1)
+    while $sair
+    do
+    menuen
+    respuesta=$?
+    options $respuesta
+
+
+    done
+    ;;
+    2)
+    while $sair
+    do
+    menues
+    respuesta=$?
+    opciones $respuesta
+
+
+    done
+    ;;
+    3)
+    while $sair
+    do
+    menugl
+    respuesta=$?
+    opcions $respuesta
+
+
+    done
+    ;;
+esac
 
 
 
