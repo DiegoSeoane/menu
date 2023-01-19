@@ -1,7 +1,7 @@
 #!/bin/bash
-
+sair=true; #declarada variable para sair do bucle
 echo `clear`
-echo "             ________________________________________________________"
+echo "             ═════════════════════════════════════════════════════════"
 echo ""
 echo "                                   
                   \ \        / / | |                         | |
@@ -11,37 +11,43 @@ echo "
                       \/  \/ \___|_|\___\___/|_| |_| |_|\___||_|"
 echo "
 "
-echo "             ________________________________________________________"
+echo "             ═════════════════════════════════════════════════════════"
 
 sleep 1
 echo `clear`
-sair=true;
 echo "  _________________________"
 echo ""
-echo "  █████████████████████████"
-echo "  █####### LANGUAGES #####█"
-echo "  █████████████████████████"
-echo "  █ 1.      English       █"
-echo "  █ 2.      Spanish       █"
-echo "  █ 3.      Galician      █"
-echo "  █████████████████████████"
+echo "  █████████████████████████╗"              #selector de idioma
+echo -e "  █████████\e[7mLANGUAGES\e[27m███████║"
+echo "  █████████████████████████║"
+echo "  █ 1.      English       █║"
+echo "  █ 2.      Spanish       █║"
+echo "  █ 3.      Galician      █║"
+echo "  █████████████████████████║"
+echo "  ╚════════════════════════╝"
 echo "  _________________________"
 echo ""
 read -p "Select a language (Type the number): " language
-
+#
+#
 ### FUNCTIONS ###
+#
+#
 function menugl(){
-    echo "  _________________________"
+    echo `clear`
+    echo "  _________________________"         #funcion que crea o menu graficamente en galego
     echo "" 
-    echo "  █████████████████████████"   
-    echo "  █######### Menu ########█"
-    echo "  █████████████████████████"
-    echo "  █ 1.    Calculadora     █"
-    echo "  █ 2. Directorio Actual  █"
-    echo "  █ 3.       Data         █"
-    echo "  █ 4.  Crear Directorio  █"
-    echo "  █ 5.      |Sair|        █"
-    echo "  █████████████████████████"
+    echo "  █████████████████████████╗"   
+    echo -e "  ███████████\e[7mMenu\e[27m██████████║"
+    echo "  █████████████████████████║"
+    echo "  █ 1.    Calculadora     █║"
+    echo "  █ 2. Directorio Actual  █║"
+    echo "  █ 3.       Data         █║"
+    echo "  █ 4.  Crear Directorio  █║"
+    echo "  █████████████████████████║"
+    echo -e "  █\e[7m 5.      |Sair|        \e[27m█║"
+    echo "  █████████████████████████║"
+    echo "  ╚════════════════════════╝"
     echo "  _________________________"
     echo ""
     
@@ -50,17 +56,20 @@ function menugl(){
     
 }
 function menuen(){
+    echo `clear`
     echo "  _________________________"
     echo ""
-    echo "  █████████████████████████"   
-    echo "  █######### Menu ########█"
-    echo "  █████████████████████████"
-    echo "  █ 1.     Calculator     █"
-    echo "  █ 2. Current Directory  █"
-    echo "  █ 3.       Date         █"
-    echo "  █ 4.  Create Directory  █"
-    echo "  █ 5.      |Exit|        █"
-    echo "  █████████████████████████" 
+    echo "  █████████████████████████╗"      #funcion que crea o menu graficamente en inglés
+    echo -e "  ███████████\e[7mMenu\e[27m██████████║"
+    echo "  █████████████████████████║"
+    echo "  █ 1.     Calculator     █║"
+    echo "  █ 2. Current Directory  █║"
+    echo "  █ 3.       Date         █║"
+    echo "  █ 4.  Create Directory  █║"
+    echo "  █████████████████████████║"
+    echo -e "  █\e[7m 5.      |Exit|        \e[27m█║"
+    echo "  █████████████████████████║"
+    echo "  ╚════════════════════════╝" 
     echo "  _________________________"
     echo ""
     
@@ -69,17 +78,20 @@ function menuen(){
     
 }
 function menues(){ 
+    echo `clear`
     echo "  _________________________"
     echo ""  
-    echo "  █████████████████████████"  
-    echo "  █######### Menu ########█"
-    echo "  █████████████████████████"
-    echo "  █ 1.    Calculadora     █"
-    echo "  █ 2. Directorio Actual  █"
-    echo "  █ 3.       Fecha        █"
-    echo "  █ 4.  Crear Directorio  █"
-    echo "  █ 5.      |Salir|       █"
-    echo "  █████████████████████████" 
+    echo "  █████████████████████████╗"      #funcion que crea o menu graficamente en castelán
+    echo -e "  ███████████\e[7mMenu\e[27m██████████║"
+    echo "  █████████████████████████║"
+    echo "  █ 1.    Calculadora     █║"
+    echo "  █ 2. Directorio Actual  █║"
+    echo "  █ 3.       Fecha        █║"
+    echo "  █ 4.  Crear Directorio  █║"
+    echo "  █████████████████████████║"
+    echo -e "  █\e[7m 5.      |Salir|       \e[27m█║"
+    echo "  █████████████████████████║"
+    echo "  ╚════════════════════════╝"
     echo "  _________________________"
     echo ""
     
@@ -88,8 +100,8 @@ function menues(){
     
 }
 function opcions(){
-    case $1 in
-        1)        
+    case $1 in                                              #este case crea o selector de
+        1)                                                  #opcións en galego
             Calculadora
         ;;
         2)            
@@ -152,8 +164,8 @@ function opcions(){
     esac
 }
 function options(){
-    case $1 in
-        1)        
+    case $1 in                                              #este case crea o selector de
+        1)                                                  #opcións en inglés
             Calculator
         ;;
         2)            
@@ -218,8 +230,8 @@ function options(){
     esac
 }
 function opciones(){
-    case $1 in
-        1)        
+    case $1 in                                              #este case crea o selector de
+        1)                                                  #opcións en castelán
             Calculadoraes
         ;;
         2)            
@@ -286,7 +298,7 @@ function opciones(){
     esac
 }
 function Calculadora(){
-    echo `clear`
+    echo `clear`                                        #funcion de calculadora en galego
     echo "  █████████████████████████"
     echo "  █######Calculadora######█"
     echo "  █████████████████████████"
@@ -298,7 +310,7 @@ function Calculadora(){
     echo "  █████████████████████████"
     echo ""
     read -p "Que queres facer? " numcalc
-    case $numcalc in
+    case $numcalc in                                    #selector de suma ou resta, cos operadores correspondentes
         1)
         echo `clear`
         echo "          » SUMA «"
@@ -344,7 +356,7 @@ function Calculadora(){
     sleep 1
 }
 function Calculadoraes(){
-    echo `clear`
+    echo `clear`                                    #funcion de calculadora en castelán
     echo "  █████████████████████████"
     echo "  █######Calculadora######█"
     echo "  █████████████████████████"
@@ -356,7 +368,7 @@ function Calculadoraes(){
     echo "  █████████████████████████"
     echo ""
     read -p "¿Que quieres hacer? " numcalc
-    case $numcalc in
+    case $numcalc in                                #selector de suma ou resta, cos operadores correspondentes
         1)
         echo `clear`
         echo "          » SUMA «"
@@ -401,7 +413,7 @@ function Calculadoraes(){
     sleep 1
 }
 function Calculator(){
-    echo `clear`
+    echo `clear`                                     #funcion de calculadora en inglés
     echo "  █████████████████████████"
     echo "  █######Calculator#######█"
     echo "  █████████████████████████"
@@ -413,7 +425,7 @@ function Calculator(){
     echo "  █████████████████████████"
     echo ""
     read -p "What do you want to do? " numcalc
-    case $numcalc in
+    case $numcalc in                                #selector de suma ou resta, cos operadores correspondentes
         1)
         echo `clear`
         echo "        » ADDITION «"
@@ -458,13 +470,16 @@ function Calculator(){
     esac
     sleep 1
 }
-
-
-
+#
+#
 ### PROGRAM ###
+#
+
+#Creamos un case para seleccionar o idioma e
+#dentro de cada valor un bucle while
 
 case $language in
-    1) #English
+    1)                          #English
     while $sair
     do
     menuen
@@ -474,7 +489,7 @@ case $language in
 
     done
     ;;
-    2) #Spanish
+    2)                          #Spanish
     while $sair
     do
     menues
@@ -484,7 +499,7 @@ case $language in
 
     done
     ;;
-    3) #Galician
+    3)                          #Galician
     while $sair
     do
     menugl
