@@ -83,7 +83,7 @@ function menues(){
     echo "  _________________________"
     echo ""
     
-    read -p "Type the option number: " num
+    read -p "Escribe el numero que quieras elegir: " num
     return $num
     
 }
@@ -309,8 +309,11 @@ function Calculadora(){
         echo "_________________________"
         echo ""
         echo "$a + $b = " $(($a + $b))        
-        echo "_________________________"
-        echo ""        
+        echo "_________________________"        
+        echo ""
+        sleep 1
+        echo "Volvendo ao menú..."
+        sleep 2        
         ;;
         2)
         echo `clear`
@@ -324,6 +327,9 @@ function Calculadora(){
         echo "$a - $b = " $(($a - $b))
         echo "_________________________"
         echo ""
+        sleep 1
+        echo "Volvendo ao menú..."
+        sleep 2        
         ;;
         *)
         echo `clear`
@@ -363,6 +369,9 @@ function Calculadoraes(){
         echo "$a + $b = " $(($a + $b))        
         echo "_________________________"
         echo ""
+        sleep 1
+        echo "Volviendo al menú..."
+        sleep 2        
         ;;
         2)
         echo `clear`
@@ -376,6 +385,8 @@ function Calculadoraes(){
         echo "$a - $b = " $(($a - $b))        
         echo "_________________________"
         echo ""
+        echo "Volviendo al menú..."
+        sleep 2        
         ;;
         *)
         echo `clear`
@@ -415,6 +426,9 @@ function Calculator(){
         echo "$a + $b = " $(($a + $b))        
         echo "_________________________"
         echo ""
+        sleep 1
+        echo "Going back to the menu..."
+        sleep 2        
         ;;
         2)
         echo `clear`
@@ -428,6 +442,9 @@ function Calculator(){
         echo "$a - $b = " $(($a - $b))
         echo "_________________________"
         echo ""
+        sleep 1
+        echo "Going back to the menu..."
+        sleep 2        
         ;;
         *)
         echo `clear`
