@@ -1,8 +1,8 @@
 ﻿#Incio do bucle while
  do
  {
-    #Declaración de variables
-    ###
+    ##Declaración de variables
+    #
 
     $primo = "É primo"
     $noprimo = "Non é primo"
