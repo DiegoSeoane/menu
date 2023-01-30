@@ -143,8 +143,8 @@
 
         ## Creamos unha variable que sexa o divisor
         #
-        ## Dentro dun bucle while facemos que si o divison non sexa igual a 0
-        #  se lle sume 1, o bucle continúa ata que o numero sexa igual a 1
+        ## Dentro dun bucle while facemos que si o resto non é igual a 0
+        #  se lle sume 1 ao divisor, o bucle continúa ata que o numero sexa igual a 1
 
         ## Bucle
         #
